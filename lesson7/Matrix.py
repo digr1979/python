@@ -36,8 +36,6 @@ class Matrix():
                 for item_left, item_right in zip(row_left, row_right):
                     new_item = item_left + item_right
                     new_row.append(new_item)
-                # new_matrix.append(new_row)
-                # new_row.clear()
                 new_matrix.append(list(new_row))
                 new_row.clear()
         except Exception as e:
