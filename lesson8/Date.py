@@ -6,6 +6,12 @@
 #
 #########################################################################
 
+""" 1. Реализовать класс «Дата», функция-конструктор которого должна принимать дату в виде строки формата «день-месяц-год».
+    В рамках класса реализовать два метода.
+    Первый, с декоратором @classmethod, должен извлекать число, месяц, год и преобразовывать их тип к типу «Число».
+    Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца и года (например, месяц — от 1 до 12).
+     Проверить работу полученной структуры на реальных данных.
+"""
 
 class Date():
     """ Класс 'Date'
@@ -48,9 +54,7 @@ class Date():
         return str(self.day).zfill(2) + '-' + str(self.month).zfill(2) + '-' + str(self.year).zfill(4)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-
+def main():
     date_str = "10-03-2008"
     print("Проверяем валидность строки \"10-03-2008\":", Date.validate_date(date_str))
 
@@ -70,5 +74,10 @@ if __name__ == '__main__':
     date_str = "23-05-100"
     my_date = Date(date_str)
     print("Принтим дату \"23-05-100\":",  my_date)
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
